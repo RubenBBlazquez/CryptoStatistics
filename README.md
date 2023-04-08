@@ -29,13 +29,13 @@ para instalar las dependencias necesarias, deberemos ir a la raiz del proyecto e
 * `pip install -r requirements.txt`
 
 ### Base de datos
-- ` python manage.py makemigrations criptoStatistics ` este comando lo que hará sera dejar preparada la migración de la base de datos, es decir, todas las relaciones/tablas necesarias en la aplicación
+- ` python manage.py makemigrations CryptoStatistics ` este comando lo que hará sera dejar preparada la migración de la base de datos, es decir, todas las relaciones/tablas necesarias en la aplicación
 
 
 - ` python manage.py migrate` con este comando aplicaremos lo que hemos dejado preparado en el comando anterior
 
 
-- ` python manage.py sqlmigrate criptoStatistics 0001  ` (este comando es opcional) se utiliza si quiere obtener las acciones que ha usado el comando anterior y obtener la información de las consultas SQL utilizadas
+- ` python manage.py sqlmigrate CryptoStatistics 0001  ` (este comando es opcional) se utiliza si quiere obtener las acciones que ha usado el comando anterior y obtener la información de las consultas SQL utilizadas
 
 
 ### Variables de Configuración

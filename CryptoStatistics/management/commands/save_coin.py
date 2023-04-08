@@ -18,14 +18,14 @@ class Command(BaseCommand):
         }
 
     def add_arguments(self, parser):
-        parser.add_argument('--crypto', type=str)
+        parser.add_argument('--symbol', type=str)
         parser.add_argument('--real_coin', type=str)
 
     def handle(self, *args, **options):
-        if not options['crypto'] or not options['real_coin']:
-            raise CommandError('Parameters [--crypto] and [--real_coin] are obligatory')
+        if not options['symbol'] or not options['real_coin']:
+            raise CommandError('Parameters [--symbol] and [--real_coin] are obligatory')
 
-        crypto = options['crypto']
+        crypto = options['symbol']
         real_coin = options['real_coin']
 
         crypto_pair = f'{crypto}-{real_coin}'

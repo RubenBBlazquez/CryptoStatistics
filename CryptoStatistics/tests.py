@@ -213,7 +213,7 @@ class SaveCoinCommandTestCase(TestCase):
 
     def test_valid_parameters(self):
         out = StringIO()
-        call_command('save_coin', crypto='BTC', real_coin='USD', stdout=out)
+        call_command('save_coin', symbol='BTC', real_coin='USD', stdout=out)
 
         self.assertIn('success', out.getvalue())
 
@@ -222,7 +222,7 @@ class SaveCoinCommandTestCase(TestCase):
             TypeError,
             call_command,
             'save_coin',
-            ccrypto='BTC',
+            symbol23='BTC',
             real_coin='USD'
         )
 
@@ -237,6 +237,6 @@ class SaveCoinCommandTestCase(TestCase):
             CommandError,
             call_command,
             'save_coin',
-            crypto='BTCCC',
+            symbol='BTCCC',
             real_coin='USD'
         )
